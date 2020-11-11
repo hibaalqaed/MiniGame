@@ -6,14 +6,30 @@ export const AppContainer = styled.div`
 
 export const Title = styled.h1`
   text-align: center;
+  font-family: Tahoma;
 `;
 
-export const Score = styled.h3`
+export const Description = styled.h2`
   text-align: center;
+  text-decoration: underline;
+  font-family: Tahoma;
+  color: green;
 `;
 
-export const Timer = styled.h3`
+export const Motivation = styled.h1`
   text-align: center;
+  font-family: Tahoma;
+  color: green;
+`;
+
+export const ScoreStyle = styled.h4`
+  text-align: center;
+  font-family: Tahoma;
+`;
+
+export const TimerStyle = styled.h4`
+  text-align: center;
+  font-family: Tahoma;
 `;
 
 export const Border = styled.div`
@@ -33,8 +49,16 @@ export const AvoHole = styled.div`
   height: 45%;
   border-radius: 100%;
   background-color: lightgreen;
-  border: 3px solid green;
+  border: 5px solid green;
   margin: 1%;
   text-align: center;
   font-size: 100px;
+  :hover {
+    background-color: green;
+    border: 5px solid lightgreen;
+  }
+`;
+
+export const AvoGuac = styled.div`
+  padding-top: 25px;
 `;

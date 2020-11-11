@@ -1,18 +1,26 @@
-import { Border, Score, Timer } from "../styles";
+import { useState } from "react";
+import { Border, ScoreStyle } from "../styles";
+import Timer from "./Timer";
 
 import AvocadoHole from "./AvocadoHole";
 
 const GameScreen = () => {
+  const [score, setScore] = useState(0);
+  const updatedScore = () => {
+    setScore(score + 5);
+  };
+
   return (
     <>
-      <Score>Score: 0pts</Score>
-      <Timer>Time left: 0:00 min</Timer>
+      <Timer />
+      <ScoreStyle>Score: {score}pts</ScoreStyle>
+
       <Border>
-        <AvocadoHole />
-        <AvocadoHole />
-        <AvocadoHole />
-        <AvocadoHole />
-        <AvocadoHole />
+        <AvocadoHole updatedScore={updatedScore} />
+        <AvocadoHole updatedScore={updatedScore} />
+        <AvocadoHole updatedScore={updatedScore} />
+        <AvocadoHole updatedScore={updatedScore} />
+        <AvocadoHole updatedScore={updatedScore} />
       </Border>
     </>
   );
